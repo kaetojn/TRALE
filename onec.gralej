@@ -1,0 +1,58 @@
+<'fido feeds the dog with biscuits'
+{ :'srule:fido feeds the dog with biscuits'
+    s
+    { :'np1:fido'
+        np(
+            top: n(
+                tense: tense,
+                type: noun))
+        { :'lexicon:fido'
+            n(
+                tense: tense,
+                type: pronoun)
+        }
+    }
+    { :'vprule:feeds the dog with biscuits'
+        vp(
+            vpnp: np(
+                top: n(
+                    tense: tense,
+                    type: noun)))
+        { :'lexicon:feeds'
+            v(
+                vtense: pl)
+        }
+        { :'np3:the dog with biscuits'
+            np(
+                top: n(
+                    tense: tense,
+                    type: noun))
+            { :'lexicon:the'
+                det
+            }
+            { :'lexicon:dog'
+                n(
+                    tense: sg,
+                    type: noun)
+            }
+            { :'pprule:with biscuits'
+                pp(
+                    ppnp: 'mgsat(np)')
+                { :'lexicon:with'
+                    p
+                }
+                { :'np1:biscuits'
+                    np(
+                        top: 'mgsat(n)')
+                    { :'lexicon:biscuits'
+                        n(
+                            tense: pl,
+                            type: noun)
+                    }
+                }
+            }
+        }
+    }
+}
+>
+
