@@ -1,7 +1,8 @@
 %Kaetochukwu Ndu, ndukaeto, 1000265955
 
 % Type Hierarchy
-cat sub [s, npsg, nppl, vpsg, vppl, np, pp, n].  
+
+bot sub [s, npsg, nppl, vpsg, vppl, np, pp, p, n].  
 s sub [].
 vsg sub [].
 vpl sub [].
@@ -14,17 +15,8 @@ npsg sub [].
 nppl sub [].
 nprp sub [].
 pp sub [].
+p sub [].
 det sub [].
-
-% Lexical Entries
-fido ---> nprp.
-biscuits ---> npl.
-feed ---> vpl.
-feeds ---> vsg.
-the ---> det.
-dog ---> nsg.
-puppies ---> npl.
-with ---> p.
 
 % Grammmar Rules
 ssgrule rule
@@ -49,7 +41,7 @@ vpplrule rule
 vppl
 ===>
 cat> vpl,
-cat> np.
+cat> npl.
 
 pprule rule
 pp
@@ -72,7 +64,7 @@ npsg3 rule
 npsg
 ===>
 cat> det,
-cat> nsg.
+cat> nsg,
 cat> pp.
 
 nppl1 rule
@@ -99,7 +91,6 @@ nppl
 cat> npl,
 cat> pp.
 
-
 np1 rule
 np
 ===>
@@ -109,3 +100,13 @@ np2 rule
 np
 ===>
 cat> nppl.
+
+% Lexical Entries
+fido ---> nprp.
+biscuits ---> npl.
+feed ---> vpl.
+feeds ---> vsg.
+the ---> det.
+dog ---> nsg.
+puppies ---> npl.
+with ---> p.
