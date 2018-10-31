@@ -1,7 +1,7 @@
 %Kaetochukwu Ndu, ndukaeto, 1000265955
 
 % Type Hierarchy
-bot sub [s, npsg, nppl, vpsg, vppl, np, pp, n].  
+cat sub [s, npsg, nppl, vpsg, vppl, np, pp, n].  
 s sub [].
 vsg sub [].
 vpl sub [].
