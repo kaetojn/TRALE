@@ -1,3 +1,5 @@
+%Kaetochukwu Ndu, ndukaeto, 1000265955
+
 :- ale_flag(subtypecover,_,off).
 :- discontiguous sub/2,intro/2.
 
@@ -145,12 +147,21 @@ cat> (inf_clause, vsem:(verbtense:Tense, subject:Subject, object:beneficiary, ob
 %--------------------------------------------
 
 %Lexical Entries
+
 appeared ---> (v, vsem:(verbtense:past,  subject:appear_agent , object:appear_theme , objectpreposition:appear_theme)).
+
 expected ---> (v, vsem:(verbtense:past,  subject:expect_agent , object:expect_theme, objectpreposition:expect_theme)).
+
 promised ---> (v, vsem:(verbtense:past,  subject:promise_agent, object:promise_benefit, objectpreposition:promise_agent)).
+
 sleep ---> (v, vsem:(verbtense:present, subject:sleep_experience, object:None, objectpreposition:expect_theme)).
+
 student ---> (n, nsem:student).
+
 teacher ---> (n, nsem:teacher).
+
 the ---> det.
+
 to ---> toinf.
+
 tried ---> (v, vsem:(verbtense:past, subject:try_agent , object:try_theme , objectpreposition:try_agent)).
