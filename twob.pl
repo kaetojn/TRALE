@@ -31,24 +31,24 @@ bot sub [mood, tense, sem, cat, pos, verbal, nominal, theme_roles].
                 infinitive sub [].
 
     %thematic roles for object and subject
-	theme_roles sub [agent, beneficiary, theme, none].
+	theme_roles sub [agent, beneficiary, theme, experiencer].
         agent sub [try_agent, promise_agent, expect_agent, appear_agent].
             try_agent sub [].
             promise_agent sub [].
             expect_agent sub [].
             appear_agent sub [].
-            none sub [].
+
         beneficiary sub [promise_benefit].
             promise_benefit sub [].
-            none sub [].
+  
         theme sub [appear_theme, expect_theme, try_theme].
             appear_theme sub [].
             expect_theme sub []. 
             try_theme sub [].
-            none sub [].
+
         experiencer sub [sleep_experience].
             sleep_experience sub [].
-            none sub [].
+
 
 	% semantics for verbs and nouns
 	sem sub [v_sem, n_sem].
@@ -73,7 +73,7 @@ tried ---> (v, vsem:(verbtense:past, subject:try_agent , object:try_theme , obje
 appeared ---> (v, vsem:(verbtense:past,  subject:appear_agent , object:appear_theme , objectpreposition:appear_theme)).
 promised ---> (v, vsem:(verbtense:past,  subject:promise_agent, object:promise_benefit, objectpreposition:promise_agent)).
 expected ---> (v, vsem:(verbtense:past,  subject:expect_agent , object:expect_theme, objectpreposition:expect_theme)).
-sleep ---> (v, vsem:(verbtense:present, subject:sleep_experience, object:none, objectpreposition:none)).
+sleep ---> (v, vsem:(verbtense:present, subject:sleep_experience, object:None, objectpreposition:expect_theme)).
 the ---> det.
 to ---> toinf.
 student ---> (n, nsem:student).
@@ -87,7 +87,7 @@ srule rule
 s
 ===>
 cat> np,
-cat> (vp, vsem:(verbtense:past, subject:Subject , object:Object , objectpreposition:Gap)).
+cat> (vp, vsem:(verbtense:past, subject:Subject , object:Object , objectpreposition:Trace)).
 %--------------------------------------------
 
 
@@ -120,6 +120,15 @@ cat> toinf,
 cat> (v, vsem:(verbtense:present)).
 %--------------------------------------------
 
+%--------------------------------------------
+%inf_clause -> inf_clause inf_clause %"promised to tried to"
+inf_clause3 rule
+inf_clause
+===>
+cat> inf_clause,
+cat> inf_clause.
+%--------------------------------------------
+
 
 %--------------------------------------------
 %VP -> V NP %"promised the teacher" and "tried the teacher" 
@@ -136,8 +145,8 @@ cat> np.
 vp2 rule
 vp
 ===>
-cat> (v, vsem:(verbtense:Tense, subject:Subject, object:theme, objectpreposition:Gap)),
-cat> (inf_clause, vsem:(verbtense:Tense, subject:Subject, object:theme, objectpreposition:Gap)).
+cat> (v, vsem:(verbtense:Tense, subject:Subject, object:theme, objectpreposition:Trace)),
+cat> (inf_clause, vsem:(verbtense:Tense, subject:Subject, object:theme, objectpreposition:Trace)).
 %--------------------------------------------
 
 
@@ -146,7 +155,7 @@ cat> (inf_clause, vsem:(verbtense:Tense, subject:Subject, object:theme, objectpr
 vp3 rule
 vp
 ===>
-cat> (v, vsem:(verbtense:Tense, subject:Subject, object:beneficiary, objectpreposition:Gap)),
+cat> (v, vsem:(verbtense:Tense, subject:Subject, object:beneficiary, objectpreposition:Trace)),
 cat> np,
-cat> (inf_clause, vsem:(verbtense:Tense, subject:Subject, object:beneficiary, objectpreposition:Gap)).
+cat> (inf_clause, vsem:(verbtense:Tense, subject:Subject, object:beneficiary, objectpreposition:Trace)).
 %--------------------------------------------
