@@ -68,17 +68,6 @@ bot sub [mood, tense, sem, cat, pos, verbal, nominal, theme_roles].
 			student sub [].
 			teacher sub [].
 
-%Lexical Entries
-tried ---> (v, vsem:(verbtense:past, subject:try_agent , object:try_theme , objectpreposition:try_agent)).
-appeared ---> (v, vsem:(verbtense:past,  subject:appear_agent , object:appear_theme , objectpreposition:appear_theme)).
-promised ---> (v, vsem:(verbtense:past,  subject:promise_agent, object:promise_benefit, objectpreposition:promise_agent)).
-expected ---> (v, vsem:(verbtense:past,  subject:expect_agent , object:expect_theme, objectpreposition:expect_theme)).
-sleep ---> (v, vsem:(verbtense:present, subject:sleep_experience, object:None, objectpreposition:expect_theme)).
-the ---> det.
-to ---> toinf.
-student ---> (n, nsem:student).
-teacher ---> (n, nsem:teacher).
-
 
 %Grammar Rules
 %--------------------------------------------
@@ -87,9 +76,8 @@ srule rule
 s
 ===>
 cat> np,
-cat> (vp, vsem:(verbtense:past, subject:Subject , object:Object , objectpreposition:Trace)).
+cat> (vp, vsem:(verbtense:past, subject:Subject , object:Object , objectpreposition:Objectpreposition)).
 %--------------------------------------------
-
 
 %--------------------------------------------
 %NP -> Det N %"the student"
@@ -99,7 +87,6 @@ np
 cat> det,
 cat> n.
 %--------------------------------------------
-
 
 %--------------------------------------------
 %inf_clause -> toinf V %"to sleep"
@@ -129,7 +116,6 @@ cat> inf_clause,
 cat> inf_clause.
 %--------------------------------------------
 
-
 %--------------------------------------------
 %VP -> V NP %"promised the teacher" and "tried the teacher" 
 vp1 rule
@@ -139,23 +125,32 @@ cat> (v, vsem:(verbtense:Tense)),
 cat> np.
 %--------------------------------------------
 
-
 %--------------------------------------------
 %VP -> V inf_clause %"appeared to sleep"
 vp2 rule
 vp
 ===>
-cat> (v, vsem:(verbtense:Tense, subject:Subject, object:theme, objectpreposition:Trace)),
-cat> (inf_clause, vsem:(verbtense:Tense, subject:Subject, object:theme, objectpreposition:Trace)).
+cat> (v, vsem:(verbtense:Tense, subject:Subject, object:theme, objectpreposition:Objectpreposition)),
+cat> (inf_clause, vsem:(verbtense:Tense, subject:Subject, object:theme, objectpreposition:Objectpreposition)).
 %--------------------------------------------
-
 
 %--------------------------------------------
 %VP -> V NP inf_clause %"promised the student to sleep"
 vp3 rule
 vp
 ===>
-cat> (v, vsem:(verbtense:Tense, subject:Subject, object:beneficiary, objectpreposition:Trace)),
+cat> (v, vsem:(verbtense:Tense, subject:Subject, object:beneficiary, objectpreposition:Objectpreposition)),
 cat> np,
-cat> (inf_clause, vsem:(verbtense:Tense, subject:Subject, object:beneficiary, objectpreposition:Trace)).
+cat> (inf_clause, vsem:(verbtense:Tense, subject:Subject, object:beneficiary, objectpreposition:Objectpreposition)).
 %--------------------------------------------
+
+%Lexical Entries
+appeared ---> (v, vsem:(verbtense:past,  subject:appear_agent , object:appear_theme , objectpreposition:appear_theme)).
+expected ---> (v, vsem:(verbtense:past,  subject:expect_agent , object:expect_theme, objectpreposition:expect_theme)).
+promised ---> (v, vsem:(verbtense:past,  subject:promise_agent, object:promise_benefit, objectpreposition:promise_agent)).
+sleep ---> (v, vsem:(verbtense:present, subject:sleep_experience, object:None, objectpreposition:expect_theme)).
+student ---> (n, nsem:student).
+teacher ---> (n, nsem:teacher).
+the ---> det.
+to ---> toinf.
+tried ---> (v, vsem:(verbtense:past, subject:try_agent , object:try_theme , objectpreposition:try_agent)).
