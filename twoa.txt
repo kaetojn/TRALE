@@ -1,0 +1,24 @@
+%Kaetochukwu Ndu, ndukaeto, 1000265955
+
+ii.  The student appeared to sleep.
+	Appear:
+		Theme: to sleep
+	Sleep:  
+		Experiencer: The student
+
+
+iii.  The student promised the teacher to sleep.
+	Promise:  
+		Agent:The student
+		Theme: to sleep
+		Beneficiary: the teacher
+	Sleep:  
+		Experiencer: The student
+
+
+iv.  The student expected the teacher to sleep.
+	Expect: 
+		Agent: The student
+		Theme: the teacher to sleep
+	Sleep: 
+		Experiencer: the teacher

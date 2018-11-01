@@ -10,6 +10,7 @@ bot sub [mood, tense, sem, cat, pos, verbal, nominal].
                 v sub [].
                 p sub [].
                 det sub [].
+                
 	% phrasal categories
 	cat sub [vproj,np].
 		vproj sub [inf_clause,s,vp] intro [mood:mood].
