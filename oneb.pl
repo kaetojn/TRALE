@@ -16,17 +16,6 @@ cat sub [s, np, vp, pp, n, v, p, det].
 	pp sub [] intro [ppnp:np].
 	det sub [].
 
-
-% Lexical Entries
-fido ---> (n, type:pronoun).
-biscuits ---> (n, tense:pl, type:noun).
-feed ---> (v, vtense:sg).
-feeds ---> (v, vtense:pl).
-the ---> det.
-dog ---> (n, tense:sg, type:noun).
-puppies ---> (n, tense:pl, type:noun).
-with ---> p.
-
 %---------------------------------
 %Rule 1
 %Grammar2 | (Grammar 1)
@@ -103,3 +92,15 @@ np
 cat> (n, tense:pl, type:noun),
 cat> pp.
 %---------------------------------
+
+
+% Lexical Entries
+
+biscuits ---> (n, tense:pl, type:noun).
+dog ---> (n, tense:sg, type:noun).
+feed ---> (v, vtense:sg).
+feeds ---> (v, vtense:pl).
+fido ---> (n, type:pronoun).
+puppies ---> (n, tense:pl, type:noun).
+the ---> det.
+with ---> p.

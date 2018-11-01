@@ -102,11 +102,12 @@ np
 cat> nppl.
 
 % Lexical Entries
-fido ---> nprp.
+
 biscuits ---> npl.
+dog ---> nsg.
 feed ---> vpl.
 feeds ---> vsg.
-the ---> det.
-dog ---> nsg.
+fido ---> nprp.
 puppies ---> npl.
+the ---> det.
 with ---> p.
