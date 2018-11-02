@@ -32,7 +32,7 @@ test_sent([the,student,promised,the,teacher,to,sleep]).
 test_sent([the,student,tried,the,teacher])
 test_sent([the,student,expected,the,teacher]). 
 test_sent([the,student,promised,to,sleep]).
-test_sent([the,student,sleep,the,teacher]), fails.
+test_sent([the,student,sleep,the,teacher]) fails).
 
 %Failed
 test_sent([the, student, appeared], fails).
