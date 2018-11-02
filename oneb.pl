@@ -97,10 +97,17 @@ cat> pp.
 % Lexical Entries
 
 biscuits ---> (n, tense:pl, type:noun).
+
 dog ---> (n, tense:sg, type:noun).
+
 feed ---> (v, vtense:sg).
+
 feeds ---> (v, vtense:pl).
+
 fido ---> (n, type:pronoun).
+
 puppies ---> (n, tense:pl, type:noun).
+
 the ---> det.
+
 with ---> p.
