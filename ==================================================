@@ -1,0 +1,38 @@
+================================================================================
+INITIALIZING
+================================================================================
+Loading word embeddings...there are 4003 word embeddings.
+Determining POS tags...there are 17 tags.
+Determining deprel labels...there are 39 deprel labels.
+Getting training data...there are 133538 samples.
+Getting dev data...there are 1700 samples.
+Getting test data...there are 2416 samples.
+Word feat size: 18, tag feat size: 18, deprel feat size: 12, classes size: 83
+2018-12-06 15:05:36.773124: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2018-12-06 15:05:36.773151: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2018-12-06 15:05:36.773156: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2018-12-06 15:05:36.773161: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2018-12-06 15:05:36.773167: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+2018-12-06 15:05:37.305403: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:893] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2018-12-06 15:05:37.305786: I tensorflow/core/common_runtime/gpu/gpu_device.cc:955] Found device 0 with properties: 
+name: GeForce GTX 1050 Ti
+major: 6 minor: 1 memoryClockRate (GHz) 1.392
+pciBusID 0000:01:00.0
+Total memory: 3.94GiB
+Free memory: 3.85GiB
+2018-12-06 15:05:37.305811: I tensorflow/core/common_runtime/gpu/gpu_device.cc:976] DMA: 0 
+2018-12-06 15:05:37.305817: I tensorflow/core/common_runtime/gpu/gpu_device.cc:986] 0:   Y 
+2018-12-06 15:05:37.305838: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1045] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1050 Ti, pci bus id: 0000:01:00.0)
+2018-12-06 15:05:37.306339: E tensorflow/stream_executor/cuda/cuda_driver.cc:924] failed to allocate 3.56G (3820748800 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY
+2018-12-06 15:05:37.306364: E tensorflow/stream_executor/cuda/cuda_driver.cc:924] failed to allocate 3.20G (3438673920 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY
+2018-12-06 15:05:37.306381: E tensorflow/stream_executor/cuda/cuda_driver.cc:924] failed to allocate 2.88G (3094806528 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY
+2018-12-06 15:05:37.306388: E tensorflow/stream_executor/cuda/cuda_driver.cc:924] failed to allocate 2.59G (2785325824 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY
+2018-12-06 15:05:37.306405: E tensorflow/stream_executor/cuda/cuda_driver.cc:924] failed to allocate 2.33G (2506793216 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY
+2018-12-06 15:05:37.306412: E tensorflow/stream_executor/cuda/cuda_driver.cc:924] failed to allocate 2.10G (2256113920 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY
+2018-12-06 15:05:37.306421: E tensorflow/stream_executor/cuda/cuda_driver.cc:924] failed to allocate 1.89G (2030502656 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY
+2018-12-06 15:05:37.306427: E tensorflow/stream_executor/cuda/cuda_driver.cc:924] failed to allocate 1.70G (1827452416 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY
+2018-12-06 15:05:37.306433: E tensorflow/stream_executor/cuda/cuda_driver.cc:924] failed to allocate 1.53G (1644707072 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY
+2018-12-06 15:05:37.306440: E tensorflow/stream_executor/cuda/cuda_driver.cc:924] failed to allocate 1.38G (1480236288 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+Abort
