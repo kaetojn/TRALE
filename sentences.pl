@@ -1,51 +1,46 @@
 %Kaetochukwu Ndu, ndukaeto, 1000265955
 
-%PART A
+%--------------------------------------------------------------------------------------
+%PART 1
+%--------------------------------------------------------------------------------------
+%Passed
+test_sent([fido, feeds, the, dog, with, puppies, with, biscuits]).
+test_sent([fido, feeds, puppies]).
+test_sent([the, dog, with, biscuits, feeds, puppies]).
+test_sent([fido,feeds,puppies]).
+test_sent([fido,feeds,the,dog]).
+test_sent([biscuits,feeds,fido], fails).
+test_sent([fido, feeds, fido]).
+test_sent([fido,feeds,dog], fails).
+test_sent([fido,feeds,biscuits], fails).
 
-%Pass
-test_sent([fido, fed, the, dog, with, puppies, with, biscuits]).
-test_sent([fido, fed, puppies]).
-test_sent([the, dog, with, biscuits, fed, biscuits]).
-test_sent([fido,fed,the,puppies]).
-test_sent([fido,fed,puppies]).
-test_sent([fido,fed,biscuits]).
-test_sent([fido,fed,the,dog]).
+%Failed
+test_sent([biscuits, feeds, the, puppies], fails).
+test_sent([biscuits,feed,fido], fails).
+test_sent([fido, feeds, with, biscuits], fails).
+test_sent([fido, with, puppies, feeds, puppies], fails).
+test_sent([fido,feed,the,puppies], fails).
 
-%Fail
-test_sent([biscuits, fed, the, puppies], fails).
-test_sent([biscuits,fed,fido], fails).
-test_sent([fido, fed, fido], fails).
-test_sent([fido, fed, with, biscuits], fails).
-test_sent([fido, with, puppies, fed, puppies], fails).
-test_sent([fido,fed,dog], fails).
-test_sent([fido,fed,fido], fails).
 
-%PART B
-
-%Pass
-test_sent([students, expected, to, expect, to, expect, to, promise, the, students, to, sleep]).
-test_sent([teachers, expected, the, teacher, to, sleep]).
-test_sent([the, student, appeared, the, teacher, to, sleep]).
-test_sent([the,student,appeared,the,teacher,to,sleep]).
-test_sent([the,student,expected,the,teacher,appeared,the,student,to,sleep]).
-test_sent([the,student,expected,the,teacher,to,sleep]).
+%--------------------------------------------------------------------------------------
+%PART 2
+%--------------------------------------------------------------------------------------
+%Passed
+test_sent([the,teacher, expected, the, teacher, to, sleep]).
 test_sent([the,student,expected,to,sleep]).
 test_sent([the,student,promised,the,teacher,to,sleep]).
 test_sent([the,student,tried,the,teacher])
-test_sent([the,student,tried,to,sleep]).
+test_sent([the,student,expected,the,teacher]). 
+test_sent([the,student,promised,to,sleep]).
+test_sent([the,student,sleep,the,teacher]) fails).
 
-%Fail
-test_sent([student, expected, to, sleep], fails).
-test_sent([student,tried,to,sleep], fails).
-test_sent([students, expected, to, sleep, to, sleep], fails).
-test_sent([the, student, appeared, to, sleep], fails).
+%Failed
 test_sent([the, student, appeared], fails).
 test_sent([the, student, expected, to], fails).
-test_sent([the,student,appeared,to,sleep], fails).
-test_sent([the,student,expected,the,teacher], fails). 
 test_sent([the,student,promised,the,teacher,the,student,tried,to,sleep], fails).
-test_sent([the,student,promised,the,teacher], fails).
-test_sent([the,student,promised,to,sleep], fails).
+test_sent([the,student,promised,the,teacher,to,appeared,to,sleep]).
 test_sent([the,student,promised], fails).
-test_sent([the,student,sleep,the,teacher], fails).
 test_sent([the,student,tried,the,teacher,appeared,the,student,to,sleep], fails).
+test_sent([the, student, appeared, the, teacher, to, sleep], fails).
+test_sent([the,student,expected,the,teacher,appeared,the,student,to,sleep], fails).
+test_sent([the,student,expected,teacher,to,sleep], fails).
